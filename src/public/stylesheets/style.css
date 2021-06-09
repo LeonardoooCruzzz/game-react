@@ -1,0 +1,79 @@
+body {
+  font: 14px "Arial", Futura, sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+}
+body::before, .board-row:before,form .button::before,
+body::after, .board-row:after,form .button::after{
+  content: '';
+  clear: both;
+  display: flex;
+}
+.game {
+  text-align: center;
+}
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: teal;
+  margin: 0 0 30px;
+}
+.jogo, .tabuleiro{
+  display: inline-block;
+}
+.jogador{
+  font-size: 14px;
+  color: gray;
+  margin: 0 0 10px;
+}
+.board-row .square {
+  background: #fff;
+  border: 2px solid gray;
+  border-top: none;
+  float: left;
+  color: gray;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  height: 34px;
+  width: 34px;
+}
+.jogo .board-row.box-1 .square {border-top: 2px solid gray;}
+.board-row .square:last-child{border-left: none;}
+.board-row .square:first-child{border-right: none;}  
+.square:focus {outline: #000;}
+form {
+  margin-top: 30px;
+}
+form .input{
+  display: inline-block;
+  vertical-align: middle;
+}
+form .input:first-child{margin-right: 50px;}
+form input{
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: #000;
+}
+form input:focus,form input{border: solid 1px gray!important;}
+form .button{position: relative;}
+form .limpar, form button{
+  display: inline-block;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  margin-top: 30px;
+  padding: 10px 5px;
+  background-color: chocolate;
+  cursor: pointer;
+}
+form .limpar.not{opacity: 0;visibility: hidden;}
